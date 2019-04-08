@@ -1,30 +1,14 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DataTables.Queryable.Samples.Controllers
 {
     public class WebUIController : Controller
     {
-        public ActionResult Sample1()
-        {
-            return View();
-        }
-
-        public ActionResult Sample2()
-        {
-            return View();
-        }
-
-        public ActionResult Sample3()
-        {
-            return View();
-        }
-
-        public ActionResult Sample4()
-        {
-            return View();
-        }
-
-        public ActionResult Sample5()
+        public IActionResult Index()
         {
             return View();
         }

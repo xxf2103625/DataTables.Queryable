@@ -7,7 +7,6 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using System.Web;
 
 namespace DataTables.Queryable
 {
@@ -100,7 +99,8 @@ namespace DataTables.Queryable
         /// <param name="form">Request form data</param>
         public DataTablesRequest(IDictionary<string, object> form) 
             : this(form.Aggregate(new NameValueCollection(), (k, v) => { k.Add(v.Key, v.Value.ToString()); return k; })) { }
-
+        public DataTablesRequest(QueryString form)
+            : this(form.Aggregate(new NameValueCollection(), (k, v) => { k.Add(v.Key, v.Value.ToString()); return k; })) { }
         /// <summary>
         /// Creates new <see cref="DataTablesRequest{T}"/> from <see cref="Uri"/> instance.
         /// </summary>
