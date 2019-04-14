@@ -26,7 +26,7 @@ namespace DataTables.Queryable
 
         public object Execute(Expression expression)
         {
-            return sourceProvider.Execute(expression);
+            return sourceProvider. (expression);
         }
 
         public TResult Execute<TResult>(Expression expression)
